@@ -21,5 +21,5 @@ The bast way to look at this is thrue a layer system.
 
     Code Asset Management: manages code created for the deployment of the project. User has access to the assets of the project. Example: github.
 
-    Development Enviroment: IDEs, and other tools used to compile, test etc. software.
+    Development Enviroment: IDEs, and other tools used to compile, test etc. software
 
