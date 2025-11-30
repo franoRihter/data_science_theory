@@ -5,9 +5,9 @@ The bast way to look at this is thrue a layer system.
 ![data_science_catogiries](data_science_catogiries.png)
     Execution Enviroment: Special software setting the code is running in. Example: Python virtual enviroment, docker.
     
-    Data Asset Management: manages, organizes data. It creactes backups and manages user rights.
+    Data Asset Management: stores, manages, organizes data. It creactes backups and manages user rights.
     
-    Data Management: collecting, parsing and retreving data. Data is collected from mupltiple diferent saurces.
+    Data Management: collecting, parsing and retreving data. Data is collected from mupltiple diferent saurces. Example: Relational Databases, NoSQL Databases, and Big Data platforms.
 
     Data Integration and Transformation (ETL): extracts, transforms, and loads the data. Data is often stored in diferent location on diferent types devices. Data Trandformation is a process of transforming the values ,structure and format of data. Data is then loaded in a way best suted for the intended use case.
 
