@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class=" idc0_343 zqbdbhmuqk"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Practise SQL</title>
+    <link rel="stylesheet" href="sn_data/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="sn_data/main.2acbb312.css">
+
+
+    <script src="sn_data/main.08f5d3d8.js"></script>
+
+    
+    <script src="sn_data/sql-formatter-2.3.3.min.js" defer="defer"></script>
+<script src="sn_data/codemirror-5.57.0.min.js"></script>
+<link rel="stylesheet" href="sn_data/codemirror-5.57.0.min.css">
+<script src="sn_data/codemirror-5.57.0-sql.min.js"></script>
+<script src="sn_data/cm-resize-1.0.1.min.js"></script><style>.cm-resize-handle{display:block;position:absolute;bottom:0;right:0;z-index:99;width:18px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0,0 16,16'%3E%3Cpath stroke='gray' stroke-width='2' d='M-1,12 l18,-18 M-1,18 l18,-18 M-1,24 l18,-18 M-1,30 l18,-18'/%3E%3C/svg%3E") center/cover;box-shadow:inset -1px -1px 0 0 silver;cursor:nwse-resize}</style>
+<style>
+    .CodeMirror { height: auto; min-height: 70px; width: 80%; border: 1px solid #ddd; }
+    .cm-resize-handle {
+        background: url("data:image/svg+xml,%3Csvg%20aria-labelledby%3D%22cm-drag-to-resize%22%20role%3D%22img%22%20fill%3D%22%23ccc%22%20stroke%3D%22%23ccc%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20height%3D%2216%22%3E%0A%20%20%3Ctitle%20id%3D%22cm-drag-to-resize%22%3EDrag%20to%20resize%3C%2Ftitle%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M1%202.75A.75.75%200%20011.75%202h12.5a.75.75%200%20110%201.5H1.75A.75.75%200%20011%202.75zm0%205A.75.75%200%20011.75%207h12.5a.75.75%200%20110%201.5H1.75A.75.75%200%20011%207.75zM1.75%2012a.75.75%200%20100%201.5h12.5a.75.75%200%20100-1.5H1.75z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        box-shadow: none;
+        cursor: ns-resize;
+    }
+</style>
+
+    <link rel="stylesheet" href="sn_data/simple_sql.css">
+
+    <link rel="stylesheet" href="sn_data/show-hint.css">
+    <script src="sn_data/show-hint.js"></script>
+    <script src="sn_data/sql-hint.js"></script>
+
+    <link rel="stylesheet" href="sn_data/bootstrap.min.css">
+    <link rel="stylesheet" href="sn_data/app.css">
+
+    <script src="sn_data/jquery-3.5.0.slim.min.js"></script>
+    <script src="sn_data/popper.min.js"></script>
+    <script src="sn_data/bootstrap.min.js"></script>
+
+    <script>
+      function buttonClick() {
+        document.getElementById("buttonSubmit").style.display = "none";
+        document.getElementById("buttonProgress").style.display = "block";
+
+        document.getElementById("query").submit();
+      }
+    </script>
+</head>
+<body class="">
+<div class="not-footer">
+<header><nav>
+    <p class="crumbs">
+        <a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/">home</a>
+        <!-- Practice SQL -->
+
+        
+            / <a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/sn?database=SanFranciscoFilmLocations">SanFranciscoFilmLocations</a>
+        
+    </p>
+    
+  
+  
+    <p class="crumbs">
+      
+        <a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/">home</a>
+        
+      
+    </p>
+  
+
+    
+    <details class="nav-menu">
+        <summary><svg aria-labelledby="nav-menu-svg-title" role="img" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                <title id="nav-menu-svg-title">Menu</title>
+                <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+        </svg></summary>
+        <div class="nav-menu-inner">
+            
+            <ul>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/add-datasets">Add Datasets</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/databases">Databases</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/plugins">Installed plugins</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/versions">Version info</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/metadata">Metadata</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/settings">Settings</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/permissions">Debug permissions</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/messages">Debug messages</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/allow-debug">Debug allow rules</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/threads">Debug threads</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/actor">Debug actor</a></li>
+                
+                <li><a href="https://datasette-0-labs-prod-misc-tools-us-east-0.labs.cognitiveclass.ai/user/franorihter/-/patterns">Pattern portfolio</a></li>
+                
+            </ul>
+            
+            
+        </div>
+    </details>
+    
+
+</nav></header>
+
+
+
+    
+
+
+
+<section class="content">
+
+<h1>Practice SQL</h1>
+
+<form id="query" action="/user/franorihter/-/sn" method="post">
+    <input type="hidden" name="database" value="SanFranciscoFilmLocations">
+    <input type="hidden" name="csrftoken" value="InNZWXl6Vk80cUhzM2ZBNXci.LVLopud-Bh37jp8KZT2CuOVTsHM">
+    <p id="title">
+      </p><p style="font-weight: bold; margin-right: 10px; display: inline-block;">Database:</p>
+      SanFranciscoFilmLocations
+    <p></p>
+    <p><textarea id="sql-editor" name="sql" style="width: 80%; height: 10em; padding: 6px;">    SELECT Director, DISTINCT(Title),  ReleaseYear FROM FilmLocations WHERE  Actror = "Clint Eastwood";</textarea></p>
+
+
+    <div class="buttonbox">
+      <button type="button" onclick="buttonClick()" id="buttonSubmit" class="btn btn-primary btn-lg btn-block" style="width: 80%;">Submit query</button>
+
+      <button class="btn btn-primary btn-lg btn-block" type="button" id="buttonProgress" style="display: none; width: 80%;" disabled="disabled">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </button>
+
+      <!--
+      <a href="/user/franorihter/-/revert?database=SanFranciscoFilmLocations">
+        <button type="button" onclick="buttonRevert" id="buttonRevert" >View Original</button>
+      </a>
+      -->
+    </div>
+
+</form>
+
+<br>
+
+
+<h2>Results</h2>
+
+
+
+<p class="message-error">All commands did not run successfully</p>
+<br>
+<hr>
+
+
+
+
+<!-- <h3><code>SELECT Director, DISTINCT(Title), releaseYear FROM FilmLocations WHERE  Actror = &#34;Clint Eastwood&#34;</code></h3> -->
+
+
+<p style="white-space: pre-line;" class="message-error">SELECT Director, DISTINCT(Title), releaseYear FROM FilmLocations WHERE  Actror = "Clint Eastwood"
+Error Message: near "DISTINCT": syntax error</p>
+
+
+
+<hr>
+
+
+<!-- <script>
+window.onload = () => {
+    const sqlFormat = document.querySelector("button#sql-format");
+    const readOnly = document.querySelector("pre#sql-query");
+    const sqlInput = document.querySelector("textarea#sql-editor");
+    if (sqlFormat && !readOnly) {
+        sqlFormat.hidden = false;
+    }
+    if (sqlInput) {
+        var editor = CodeMirror.fromTextArea(sqlInput, {
+          lineNumbers: true,
+          mode: "text/x-sql",
+          lineWrapping: true,
+        });
+        editor.setOption("extraKeys", {
+          "Shift-Enter": function() {
+            document.getElementsByClassName("sql")[0].submit();
+          },
+          Tab: false
+        });
+        if (sqlFormat) {
+            sqlFormat.addEventListener("click", ev => {
+                editor.setValue(sqlFormatter.format(editor.getValue()));
+            })
+        }
+        cmResize(editor, {resizableWidth: false});
+    }
+    if (sqlFormat && readOnly) {
+        const formatted = sqlFormatter.format(readOnly.innerHTML);
+        if (formatted != readOnly.innerHTML) {
+            sqlFormat.hidden = false;
+            sqlFormat.addEventListener("click", ev => {
+                readOnly.innerHTML = formatted;
+            })
+        }
+    }
+}
+</script> -->
+
+<script>
+
+  CodeMirror.fromTextArea(document.getElementById("sql-editor"), {
+        mode: "text/x-sql",
+        lineNumbers: true,
+        extraKeys: {"Ctrl-Enter": "autocomplete", "Cmd-Enter": "autocomplete"}, // To invoke the auto complete
+        hint: CodeMirror.hint.sql,
+        hintOptions: {
+            tables: {'FilmLocations': ['Title', 'ReleaseYear', 'Locations', 'FunFacts', 'ProductionCompany', 'Distributor', 'Director', 'Writer', 'Actor1', 'Actor2', 'Actor3']}
+        }
+  });
+
+  CodeMirror.commands.autocomplete = function(cm) {
+    CodeMirror.showHint(cm, CodeMirror.hint.javascript); // Error Here
+  }
+</script>
+
+
+</section>
+</div>
+<footer class="ft">Powered by <a href="https://datasette.io/" title="Datasette v">Datasette</a>
+
+</footer>
+
+<script>
+document.body.addEventListener('click', (ev) => {
+    /* Close any open details elements that this click is outside of */
+    var target = ev.target;
+    var detailsClickedWithin = null;
+    while (target && target.tagName != 'DETAILS') {
+        target = target.parentNode;
+    }
+    if (target && target.tagName == 'DETAILS') {
+        detailsClickedWithin = target;
+    }
+    Array.from(document.getElementsByTagName('details')).filter(
+        (details) => details.open && details != detailsClickedWithin
+    ).forEach(details => details.open = false);
+});
+</script>
+
+
+    <script>[]</script>
+
+    <script>
+window.datasette = window.datasette || {};
+datasette.leaflet = {
+    JAVASCRIPT_URL: '/user/franorihter/-/static-plugins/datasette-leaflet/leaflet-v1.7.1.js',
+    CSS_URL: '/user/franorihter/-/static-plugins/datasette-leaflet/leaflet-v1.7.1.css'
+};
+</script>
+
+
+
+
+</body></html>
